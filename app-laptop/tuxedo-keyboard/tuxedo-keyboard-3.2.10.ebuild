@@ -17,8 +17,6 @@ KEYWORDS="~amd64 ~x86"
 BUILD_TARGETS="all"
 MODULE_NAMES="clevo_acpi(tuxedo:${S}:src) clevo_wmi(tuxedo:${S}:src) uniwill_wmi(tuxedo:${S}:src) tuxedo_keyboard(tuxedo:${S}:src) tuxedo_io(tuxedo:${S}:src/tuxedo_io)"
 
-PATCHES=( "${FILESDIR}"/${PN}-3.2.1-rm-unused-functions.patch )
-
 pkg_setup() {
 	linux-mod_pkg_setup
         BUILD_PARAMS="CC=$(tc-getBUILD_CC) KDIR=${KV_DIR} V=1 KBUILD_VERBOSE=1"
