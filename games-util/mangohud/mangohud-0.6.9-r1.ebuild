@@ -50,13 +50,9 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-PATCHES=(
-	"${FILESDIR}/5754ca13ee2cdf19a76b4fc79dd914a58d6371f5.patch"
-)
-
 src_prepare() {
-	default
-
+	mv "${WORKDIR}/${MY_PN}-v${MY_PV}${MY_PV_REV}" "${WORKDIR}/${P}"
+	eapply "${FILESDIR}/5754ca13ee2cdf19a76b4fc79dd914a58d6371f5.patch"
 
 	}
 
