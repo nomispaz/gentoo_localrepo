@@ -13,8 +13,7 @@ MY_PV=$(ver_cut 1-3)
 DESCRIPTION="A Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more."
 HOMEPAGE="https://github.com/flightlessmango/MangoHud"
 
-SRC_URI="https://github.com/flightlessmango/MangoHud/releases/download/v${MY_PV}${MY_PV_REV}/${MY_PN}-v${MY_PV}${MY_PV_REV}-Source.tar.xz -> ${P}.tar.gz
-					https://github.com/flightlessmango/MangoHud/commit/5754ca13ee2cdf19a76b4fc79dd914a58d6371f5.patch --> ${FILESDIR}/5754ca13ee2cdf19a76b4fc79dd914a58d6371f5.patch"
+SRC_URI="https://github.com/flightlessmango/MangoHud/releases/download/v${MY_PV}${MY_PV_REV}/${MY_PN}-v${MY_PV}${MY_PV_REV}-Source.tar.xz -> ${P}.tar.gz"
 
 KEYWORDS="~amd64"
 
