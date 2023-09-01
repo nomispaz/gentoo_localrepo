@@ -50,8 +50,12 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
+src_unpoack() {
+	unpack ${A}
+	mv "${WORKDIR}/MangoHud-${MY_PV}${MY_PV_REV}" "${WORKDIR}/mangohud-${MY_PV}${MY_PV_REV}" || die
+}
+
 src_prepare() {
-	mv "${WORKDIR}/${MY_PN}-v${MY_PV}${MY_PV_REV}" "${WORKDIR}/${P}"
 	eapply "${FILESDIR}/5754ca13ee2cdf19a76b4fc79dd914a58d6371f5.patch"
 
 	}
