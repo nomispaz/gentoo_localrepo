@@ -27,8 +27,6 @@ REQUIRED_USE="
 
 BDEPEND="
 	$(python_gen_any_dep 'dev-python/mako[${PYTHON_USEDEP}]')
-	media-libs/glew
-	media-libs/glfw
 "
 
 python_check_deps() {
@@ -66,9 +64,9 @@ src_configure() {
 	local emesonargs=(
 		-Duse_system_spdlog=enabled
 		-Dinclude_doc=false
-		-Dmangoapp=true
-	        -Dmangohudctl=true
-		-Dmangoapp_layer=true
+		-Dmangoapp=false
+	        -Dmangohudctl=false
+		-Dmangoapp_layer=false
 		$(meson_feature video_cards_nvidia with_nvml)
 		$(meson_feature xnvctrl with_xnvctrl)
 		$(meson_feature X with_x11)
