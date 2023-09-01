@@ -64,7 +64,6 @@ src_prepare() {
 
 src_configure() {
 	local emesonargs=(
-		-Dappend_libdir_mangohud=false
 		-Duse_system_spdlog=enabled
 		-Dinclude_doc=false
 		-Dmangoapp=true
