@@ -27,6 +27,7 @@ REQUIRED_USE="
 
 BDEPEND="
 	$(python_gen_any_dep 'dev-python/mako[${PYTHON_USEDEP}]')
+	media-libs/glew
 "
 
 python_check_deps() {
