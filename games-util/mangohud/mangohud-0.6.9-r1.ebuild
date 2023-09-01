@@ -65,6 +65,9 @@ src_configure() {
 		-Dappend_libdir_mangohud=false
 		-Duse_system_spdlog=enabled
 		-Dinclude_doc=false
+		-Dmangoapp=true
+	        -Dmangohudctl=true
+		-Dmangoapp_layer=true
 		$(meson_feature video_cards_nvidia with_nvml)
 		$(meson_feature xnvctrl with_xnvctrl)
 		$(meson_feature X with_x11)
