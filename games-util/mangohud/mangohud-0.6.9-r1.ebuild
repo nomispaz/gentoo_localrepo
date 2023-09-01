@@ -52,7 +52,7 @@ RDEPEND="${DEPEND}"
 
 src_unpoack() {
 	unpack ${A}
-	mv "${WORKDIR}/MangoHud-${MY_PV}${MY_PV_REV}" "${WORKDIR}/mangohud-${MY_PV}${MY_PV_REV}" || die
+	mv "${WORKDIR}/MangoHud-v${MY_PV}${MY_PV_REV}" "${WORKDIR}/mangohud-${MY_PV}${MY_PV_REV}" || die
 }
 
 src_prepare() {
