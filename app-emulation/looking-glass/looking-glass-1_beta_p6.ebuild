@@ -34,7 +34,6 @@ RDEPEND="debug? ( sys-devel/binutils )
                         x11-libs/libX11
                         x11-libs/libXfixes
                         x11-libs/libXi
-                        x11-libs/libXScrnSaver
 			x11-libs/libXpresent
                     )
                     wayland? (
