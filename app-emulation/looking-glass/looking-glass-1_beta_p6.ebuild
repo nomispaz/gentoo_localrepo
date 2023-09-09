@@ -18,7 +18,6 @@ IUSE="debug pipewire pulseaudio wayland X"
 REQUIRED_USE="|| ( wayland X ) "
 
 RDEPEND="debug? ( sys-devel/binutils )
-                    #media-fonts/freefonts
                     media-libs/libsdl2
                     media-libs/sdl2-ttf
                     media-libs/fontconfig
