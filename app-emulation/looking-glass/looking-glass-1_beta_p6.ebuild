@@ -19,12 +19,11 @@ REQUIRED_USE="|| ( wayland X ) "
 
 RDEPEND="debug? ( sys-devel/binutils )
                     media-libs/libsdl2
-                    media-libs/sdl2-ttf
                     media-libs/fontconfig
                     dev-libs/nettle
                     media-libs/glu
                     pipewire? (
-                    media-video/pipewire:=
+                    media-video/pipewire
                     media-libs/libsamplerate
                     )
                     pulseaudio? (
