@@ -70,4 +70,15 @@ ss
 src_install() {
 	cmake_src_install
 	einstalldocs
+	dobin "${BUILD_DIR}/looking-glass-client"
+
+	if use X && ! use wayland || ! use X && use wayland; then
+		domenu "${FILESDIR}/LookingGlass.desktop"
+	fi
+
+	if use X && use wayland; then
+		domenu "${FILESDIR}/LookingGlass-X.desktop"
+		newmenu "${FILESDIR}/LookingGlass.desktop" LookingGlass-Wayland.desktop
+	fi
+
 }
