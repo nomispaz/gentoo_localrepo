@@ -6,7 +6,7 @@ EAPI=8
 MY_PV="${PV/1_beta_p/B}"
 MY_P="${MY_PN}-${MY_PV}"
 
-inherit cmake
+inherit cmake desktop
 
 DESCRIPTION="A low latency KVM FrameRelay implementation for guests with VGA PCI Passthrough"
 HOMEPAGE="https://looking-glass.io/"
