@@ -54,10 +54,6 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 CMAKE_USE_DIR="${S}"/client
 
-src_prepare () {
-	default
-}
-
 src_configure () {
 ss
 	MYCMAKEARGS=(
