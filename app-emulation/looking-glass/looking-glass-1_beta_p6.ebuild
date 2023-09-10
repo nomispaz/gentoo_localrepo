@@ -50,7 +50,7 @@ DEPEND="${RDEPEND}
 BDEPEND="dev-util/cmake
 "
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 CMAKE_USE_DIR="${S}"/client
 
