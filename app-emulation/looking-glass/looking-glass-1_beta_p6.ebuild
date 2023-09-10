@@ -3,7 +3,7 @@
 
 EAPI=8
 
-MY_PV="${PV/1_beta/B}"
+MY_PV="${PV/1_beta_p/B}"
 
 inherit cmake
 
