@@ -16,8 +16,7 @@ SRC_URI="https://looking-glass.io/artifact/${MY_PV}/source -> ${PN}-${MY_PV}.tar
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="debug pipewire pulseaudio wayland X"
-REQUIRED_USE="|| ( wayland X ) "
+IUSE="debug pipewire pulseaudio wayland +X"
 
 RDEPEND="debug? ( sys-devel/binutils )
                     media-libs/libsdl2
