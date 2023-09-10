@@ -3,12 +3,13 @@
 
 EAPI=8
 
+MY_PV="${PV/1_beta/B}"
 
 inherit cmake
 
 DESCRIPTION="A low latency KVM FrameRelay implementation for guests with VGA PCI Passthrough"
 HOMEPAGE="https://looking-glass.io/"
-SRC_URI="https://looking-glass.io/artifact/${PV}/source -> ${P}.tar.gz"
+SRC_URI="https://looking-glass.io/artifact/${MY_PV}/source -> ${P}.tar.gz"
 
 
 LICENSE="GPL-2"
