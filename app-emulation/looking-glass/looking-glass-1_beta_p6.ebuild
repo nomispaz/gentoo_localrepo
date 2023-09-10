@@ -6,7 +6,7 @@ EAPI=8
 MY_PV="${PV/1_beta_p/B}"
 MY_P="${MY_PN}-${MY_PV}"
 
-inherit cmake desktop
+inherit cmake
 
 DESCRIPTION="A low latency KVM FrameRelay implementation for guests with VGA PCI Passthrough"
 HOMEPAGE="https://looking-glass.io/"
@@ -72,7 +72,4 @@ src_install() {
 	einstalldocs
 
 	dobin "${BUILD_DIR}/looking-glass-client"
-
-	domenu	"${FILESDIR}"/looking-glass.desktop
-
 }
