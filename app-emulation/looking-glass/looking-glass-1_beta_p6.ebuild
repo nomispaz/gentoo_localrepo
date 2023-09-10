@@ -67,16 +67,7 @@ ss
 	cmake_src_configure
 }
 
-src_compile() {
-	cmake_src_compile
-
-	use doc && emake -C doc html
-}
-
 src_install() {
 	cmake_src_install
-
-	DOCS=( AUTHORS CONTRIBUTORS README.md client/DEBUGGING.md )
-	use doc && HTML_DOCS=( doc/_build/html/. )
 	einstalldocs
 }
