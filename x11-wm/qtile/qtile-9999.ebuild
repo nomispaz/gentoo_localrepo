@@ -43,7 +43,7 @@ RDEPEND="
   if [[ ${PV} == 9999 ]]; then
     >=dev-python/pywlroots-0.15*[${PYTHON_USEDEP}]
   else
-	  =dev-python/pywlroots-0.15*[${PYTHON_USEDEP}]
+    =dev-python/pywlroots-0.15*[${PYTHON_USEDEP}]
   fi	
 	)
 "
