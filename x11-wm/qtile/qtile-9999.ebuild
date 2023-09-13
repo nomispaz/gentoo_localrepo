@@ -27,12 +27,12 @@ IUSE="pulseaudio wayland"
 # pywlroots-0.15 dep.
 # xcffib v1.4.0 breaks its ffi export (https://github.com/qtile/qtile/pull/4289)
 RDEPEND="
-	<dev-python/cairocffi-1.6.0[${PYTHON_USEDEP}]
+	dev-python/cairocffi[${PYTHON_USEDEP}]
 	>=dev-python/cffi-1.1.0[${PYTHON_USEDEP}]
 	dev-python/dbus-next[${PYTHON_USEDEP}]
 	dev-python/pygobject[${PYTHON_USEDEP}]
 	>=dev-python/six-1.4.1[${PYTHON_USEDEP}]
-	<dev-python/xcffib-1.4.0[${PYTHON_USEDEP}]
+	dev-python/xcffib[${PYTHON_USEDEP}]
 	x11-libs/cairo[X,xcb(+)]
 	x11-libs/libnotify[introspection]
 	x11-libs/pango
