@@ -98,6 +98,4 @@ python_install_all() {
 	insinto /usr/share/wayland-sessions
 	doins resources/qtile-wayland.desktop
 
-	exeinto /etc/X11/Sessions
-	newexe "${FILESDIR}"/${PN} ${PN}
 }
