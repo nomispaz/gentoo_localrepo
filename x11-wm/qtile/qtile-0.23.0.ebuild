@@ -99,5 +99,5 @@ python_install_all() {
 	doins resources/qtile-wayland.desktop
 
 	exeinto /etc/X11/Sessions
-	newexe "${FILESDIR}"/${PN}-session-r1 ${PN}
+	newexe "${FILESDIR}"/${PN}-session ${PN}
 }
