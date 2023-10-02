@@ -13,10 +13,10 @@ HOMEPAGE="https://github.com/elParaguayo/qtile-extras"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/qtile/qtile.git"
+	EGIT_REPO_URI="https://github.com/elParaguayo/qtile-extras.git"
 else
 	inherit pypi
-	SRC_URI="https://github.com/elParaguayo/qtile-extras/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+	#SRC_URI="https://github.com/elParaguayo/qtile-extras/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~riscv ~x86"
 fi
 
