@@ -17,7 +17,6 @@ if [[ ${PV} == 9999 ]]; then
 else
 	inherit pypi
 	SRC_URI="https://github.com/elParaguayo/qtile-extras/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
-	#EGIT_REPO_URI="https://github.com/elParaguayo/qtile-extras.git"
 	KEYWORDS="~amd64 ~riscv ~x86"
 fi
 
