@@ -18,7 +18,6 @@ else
 	inherit pypi git-r3
 	#SRC_URI="https://github.com/elParaguayo/qtile-extras/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 	EGIT_REPO_URI="https://github.com/elParaguayo/qtile-extras/releases/tag/v{PV}"
-0.23.0
 	KEYWORDS="~amd64 ~riscv ~x86"
 fi
 
