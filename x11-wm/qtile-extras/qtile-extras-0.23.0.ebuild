@@ -37,6 +37,7 @@ distutils_enable_tests pytest
 S="${WORKDIR}/${P}"
 
 python_prepare_all() {
+	export SETUPTOOLS_SCM_PRETEND_VERSION=${PV}
 	distutils-r1_python_prepare_all
 }
 
