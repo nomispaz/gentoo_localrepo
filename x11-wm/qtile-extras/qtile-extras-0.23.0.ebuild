@@ -15,7 +15,7 @@ if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/elParaguayo/qtile-extras.git"
 else
-	inherit pypi, git-r3
+	inherit pypi git-r3
 	SRC_URI="https://github.com/elParaguayo/qtile-extras/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 	SRC_URI="git+https://github.com/elparaguayo/qtile-extras#tag=v${PV} -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~riscv ~x86"
