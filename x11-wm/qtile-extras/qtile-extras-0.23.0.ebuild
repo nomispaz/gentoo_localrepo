@@ -10,13 +10,13 @@ inherit distutils-r1 virtualx
 
 DESCRIPTION="Unofficial mods for qtile. Tagged release to match stable qtile releases."
 HOMEPAGE="https://github.com/elParaguayo/qtile-extras"
-SRC_URI="https://github.com/elParaguayo/qtile-extras/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/qtile/qtile.git"
 else
 	inherit pypi
+	SRC_URI="https://github.com/elParaguayo/qtile-extras/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~riscv ~x86"
 fi
 
