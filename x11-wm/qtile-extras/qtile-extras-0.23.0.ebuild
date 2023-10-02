@@ -32,7 +32,7 @@ BDEPEND="
 
 distutils_enable_tests pytest
 
-S="${P}"
+S="${WORKDIR}/${P}"
 
 python_prepare_all() {
 	distutils-r1_python_prepare_all
