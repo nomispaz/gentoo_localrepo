@@ -3,7 +3,7 @@
 
 EAPI=7
 
-MY_PN="Font-Awesome-icons"
+MY_PN="Font-Awesome"
 inherit font
 
 DESCRIPTION="Fontawesome SVG Icons"
