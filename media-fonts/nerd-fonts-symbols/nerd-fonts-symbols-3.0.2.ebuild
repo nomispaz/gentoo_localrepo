@@ -9,7 +9,7 @@ inherit font
 
 DESCRIPTION="High number of extra glyphs from popular 'iconic fonts'"
 HOMEPAGE="https://github.com/ryanoasis/nerd-fonts"
-SRC_URI="https://github.com/ryanoasis/nerd-fonts/releases/download/v${PV}/${MY_PN}.tar.xz -> ${P}.tar.gz"
+SRC_URI="https://github.com/ryanoasis/nerd-fonts/releases/download/v${PV}/${MY_PN}.tar.xz -> ${P}.tar.xz"
 
 KEYWORDS="~amd64"
 S="${WORKDIR}"
