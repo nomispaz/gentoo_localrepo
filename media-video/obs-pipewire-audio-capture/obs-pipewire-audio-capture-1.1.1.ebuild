@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/dimtpap/obs-pipewire-audio-capture"
 SRC_URI="https://github.com/dimtpap/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 KEYWORDS="amd64"
 
-LICENSE="GPLv2"
+LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
