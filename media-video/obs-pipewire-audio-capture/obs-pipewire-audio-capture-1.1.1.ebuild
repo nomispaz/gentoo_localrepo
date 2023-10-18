@@ -18,6 +18,10 @@ BDEPEND="media-video/wireplumber
          media-video/obs-studio
          "
 
+PATCHES=(
+	"${FILESDIR}/pluginDir-lib64.patch"
+)
+
 src_configure () {
 	MYCMAKEARGS=(
 		-DCMAKE_INSTALL_PREFIX="/usr" \
