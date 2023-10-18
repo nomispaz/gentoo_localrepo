@@ -3,6 +3,6 @@ diff --git a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -39,4 +39,4 @@
  set_target_properties(linux-pipewire-audio PROPERTIES PREFIX "")
-
+ 
 -install(TARGETS linux-pipewire-audio LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/obs-plugins)
 +install(TARGETS linux-pipewire-audio LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib64/obs-plugins)
