@@ -75,6 +75,11 @@ src_unpack() {
 	mv "hyprland-protocols-${PROTO_COMMIT}" "${S}/subprojects/hyprland-protocols" || die
 }
 
+src_prepare() {
+	eapply "${FILESDIR}/xdg-desktop-portal-hyprland-1.2.5_use_sys_sdbus-c++.patch"
+	meson_src_prepare
+}
+
 src_configure() {
 	local emesonargs=()
 	if use systemd; then
