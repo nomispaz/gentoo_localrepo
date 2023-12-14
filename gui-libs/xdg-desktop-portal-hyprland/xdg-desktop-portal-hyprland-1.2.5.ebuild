@@ -76,19 +76,8 @@ src_unpack() {
 }
 
 src_prepare() {
+	default
 	eapply "${FILESDIR}/xdg-desktop-portal-hyprland-1.2.5_use_sys_sdbus-c++.patch"
-}
-
-src_configure() {
-	local emesonargs=()
-	if use systemd; then
-		emesonargs+=(-Dsd-bus-provider=libsystemd)
-	elif use elogind; then
-		emesonargs+=(-Dsd-bus-provider=libelogind)
-	else
-		emesonargs+=(-Dsd-bus-provider=basu)
-	fi
-	meson_src_configure
 }
 
 src_compile() {
@@ -97,15 +86,8 @@ src_compile() {
 }
 
 src_install() {
-	LIBEXEC="/usr/libexec"
-
+	
 	meson_src_install
-
-	exeinto $LIBEXEC
-	doexe "${BUILD_DIR}/xdg-desktop-portal-hyprland"
-
-	insinto /usr/share/xdg-desktop-portal/portals
-	doins "${S}/hyprland.portal"
 
 	dobin "${S}/hyprland-share-picker/build/hyprland-share-picker"
 }
