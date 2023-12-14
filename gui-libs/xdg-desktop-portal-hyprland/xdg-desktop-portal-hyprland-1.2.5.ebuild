@@ -24,6 +24,7 @@ REQUIRED_USE="?? ( elogind systemd )"
 
 DEPEND="
 	>=media-video/pipewire-0.3.41:=
+	dev-cpp/sdbus-c++
 	dev-libs/inih
 	dev-libs/wayland
 	dev-qt/qtbase
