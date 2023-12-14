@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit cmake toolchain-funcs systemd
+inherit meson
 
 DESCRIPTION="xdg-desktop-portal backend for hyprland"
 HOMEPAGE="https://github.com/hyprwm/xdg-desktop-portal-hyprland"
@@ -75,15 +75,27 @@ src_unpack() {
 	mv "hyprland-protocols-${PROTO_COMMIT}" "${S}/subprojects/hyprland-protocols" || die
 }
 
+src_configure() {
+	local emesonargs=()
+	if use systemd; then
+		emesonargs+=(-Dsd-bus-provider=libsystemd)
+	elif use elogind; then
+		emesonargs+=(-Dsd-bus-provider=libelogind)
+	else
+		emesonargs+=(-Dsd-bus-provider=basu)
+	fi
+	meson_src_configure
+}
+
 src_compile() {
-	cmake_src_compile all
+	meson_src_compile
 	emake -C hyprland-share-picker all
 }
 
 src_install() {
 	LIBEXEC="/usr/libexec"
 
-	cmake_src_install
+	meson_src_install
 
 	exeinto $LIBEXEC
 	doexe "${BUILD_DIR}/xdg-desktop-portal-hyprland"
