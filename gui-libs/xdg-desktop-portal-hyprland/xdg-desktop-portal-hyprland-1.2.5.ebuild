@@ -92,3 +92,4 @@ src_install() {
 	doins "${S}/hyprland.portal"
 
 	dobin "${S}/hyprland-share-picker/build/hyprland-share-picker"
+}
