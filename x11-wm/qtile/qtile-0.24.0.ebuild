@@ -53,10 +53,6 @@ BDEPEND="
 distutils_enable_tests pytest
 
 python_prepare_all() {
-	local PATCHES=(
-		# https://github.com/qtile/qtile/pull/4610
-		"${FILESDIR}/${P}-keyring.patch"
-	)
 
 	sed -e "s/can_import(\"wlroots.ffi_build\")/$(usex wayland True False)/" \
 		-i setup.py || die
