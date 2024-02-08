@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_EXT=1
-DISTUTILS_USE_PEP517=
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..11} )
 
 inherit distutils-r1 pypi
@@ -103,6 +103,6 @@ python_install_all() {
 	insinto /usr/share/wayland-sessions
 	doins resources/qtile-wayland.desktop
 
-	exeinto /etc/X11/Sessions
-	newexe "${FILESDIR}"/${PN}-session-r1 ${PN}
+	#exeinto /etc/X11/Sessions
+	#newexe "${FILESDIR}"/${PN}-session-r1 ${PN}
 }
