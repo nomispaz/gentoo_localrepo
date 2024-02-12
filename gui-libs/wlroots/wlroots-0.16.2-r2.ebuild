@@ -90,11 +90,3 @@ pkg_postinst() {
 	elog "You must be in the input group to allow your compositor"
 	elog "to access input devices via libinput."
 }
-
-
- 
-Questions or comments?
-Please feel free to contact us.
-
-© 2001–2022 Gentoo Foundation, Inc.
-Gentoo is a trademark of the Gentoo Foundation, Inc. The contents of this document, unless otherwise expressly stated, are licensed under the CC-BY-SA-4.0 license. The Gentoo Name and Logo Usage Guidelines apply.
