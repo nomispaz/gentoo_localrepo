@@ -8,9 +8,11 @@ inherit elisp
 DESCRIPTION="Soothing pastel theme for Emacs"
 HOMEPAGE="https://github.com/catppuccin/emacs"
 
-SRC_URI="https://github.com/catppuccin/emacs/archive/4441d5114fdcc2eb05186a974b4bbad7224e43b5.tar.gz
+COMMIT="4441d5114fdcc2eb05186a974b4bbad7224e43b5"
+
+SRC_URI="https://github.com/catppuccin/emacs/archive/${COMMIT}.tar.gz
 	-> ${P}.gh.tar.gz"
-S="${WORKDIR}/${PN}-4441d5114fdcc2eb05186a974b4bbad7224e43b5"
+S="${WORKDIR}/emacs-${COMMIT}"
 
 KEYWORDS="amd64 ~x86"
 
