@@ -5,14 +5,12 @@ EAPI=8
 
 inherit elisp
 
-DESCRIPTION="Soothing pastel theme for Emacs "
+DESCRIPTION="Soothing pastel theme for Emacs"
 HOMEPAGE="https://github.com/catppuccin/emacs"
 
-[[ "${PV}" == *20241013 ]] && COMMIT="4441d5114fdcc2eb05186a974b4bbad7224e43b5"
-
-SRC_URI="https://github.com/catppuccin/${PN}/archive/${COMMIT}.tar.gz
+SRC_URI="https://github.com/catppuccin/emacs/archive/4441d5114fdcc2eb05186a974b4bbad7224e43b5.tar.gz
 	-> ${P}.gh.tar.gz"
-S="${WORKDIR}/${PN}-${COMMIT}"
+S="${WORKDIR}/${PN}-4441d5114fdcc2eb05186a974b4bbad7224e43b5"
 
 KEYWORDS="amd64 ~x86"
 
@@ -22,3 +20,5 @@ SLOT="0"
 ELISP_REMOVE="
 	catppuccin-theme.test.el
 "
+
+SITEFILE="50${PN}-gentoo.el"
