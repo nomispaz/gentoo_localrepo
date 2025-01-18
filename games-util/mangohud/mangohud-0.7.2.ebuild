@@ -37,7 +37,7 @@ DEPEND="
 	dev-cpp/nlohmann_json
 	dev-util/glslang
 	media-libs/vulkan-loader
-	dev_utils/vulkan-headers
+	dev_util/vulkan-headers
 	media-libs/libglvnd
 	dbus? ( sys-apps/dbus )
 	X? ( x11-libs/libX11 )
