@@ -51,3 +51,4 @@ src_configure() {
 
 src_test() {
 	"${BUILD_DIR}/bin/miracle-wm-tests" || die
+}
