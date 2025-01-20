@@ -24,10 +24,10 @@ SLOT="0"
 
 RDEPEND="
 	x11-libs/gtk+:3
-	dev-python/pygobject
-	dev-python/psutil
-	dev-python/i3ipc
-	dev-python/dasbus
+	dev-python/pygobject[${PYTHON_USEDEP}]
+	dev-python/psutil[${PYTHON_USEDEP}]
+	dev-python/i3ipc[${PYTHON_USEDEP}]
+	dev-python/dasbus[${PYTHON_USEDEP}]
 	gui-apps/nwg-icon-picker
 	media-sound/playerctl
 	gui-libs/gtk-layer-shell[introspection]
