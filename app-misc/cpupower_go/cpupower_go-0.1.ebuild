@@ -22,9 +22,9 @@ DEPEND="
 BDEPEND="
 "
 
-src_compile() {
-    ego build
-}
+#src_compile() {
+#    ego build
+#}
 
 src_install() {
     dobin cpupower_go
