@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit go-module
+#inherit go-module
 
 DESCRIPTION="A simple wrapper to set maximum cpu frequency with cpupower"
 HOMEPAGE="https://github.com/nomispaz/cpupower_go"
