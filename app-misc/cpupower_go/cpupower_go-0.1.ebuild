@@ -3,14 +3,11 @@
 
 EAPI=8
 
-inherit git-r3 go-module
+#inherit go-module
 
 DESCRIPTION="A simple wrapper to set maximum cpu frequency with cpupower"
 HOMEPAGE="https://github.com/nomispaz/cpupower_go"
 SRC_URI="https://github.com/nomispaz/cpupower_go/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-
-# Git repository for the source code
-EGIT_REPO_URI="https://github.com/nomispaz/cpupower_go.git"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -25,27 +22,9 @@ DEPEND="
 BDEPEND="
 "
 
-# Set Go module variables
-EGO_PN="${PN}"
-EGO_VENDOR="vendor"
-EGO_SUM="go.sum"
-EGO_MOD="go.mod"
-
-# Fetch dependencies using go mod
-src_unpack() {
-    git-r3_src_unpack
-}
-
-src_prepare() {
-    default
-    # Ensure Go modules are tidy and dependencies are fetched
-    go mod tidy
-    go mod vendor
-}
-
-src_compile() {
-    ego build
-}
+#src_compile() {
+#    ego build
+#}
 
 src_install() {
     dobin cpupower_go
