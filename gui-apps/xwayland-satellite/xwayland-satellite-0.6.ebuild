@@ -159,8 +159,6 @@ DEPEND="
 	x11-libs/xcb-util-cursor
 "
 RDEPEND="${DEPEND}"
-BDEPEND="
-	$(llvm_gen_dep 'llvm-core/clang:${LLVM_SLOT}=')
-"
+
 
 QA_FLAGS_IGNORED="usr/bin/${PN}"
