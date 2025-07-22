@@ -10,7 +10,7 @@ HOMEPAGE="https://gitlab.freedesktop.org/emersion/wlr-randr/"
 
 SRC_URI="https://gitlab.freedesktop.org/emersion/wlr-randr/-/releases/v${PV}/downloads/${P}.tar.gz"
 S="${WORKDIR}/${PN}-v${PV}"
-KEYWORDS="~amd64
+KEYWORDS="~amd64"
 
 LICENSE="ISC"
 SLOT="0"
