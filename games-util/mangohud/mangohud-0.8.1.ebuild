@@ -74,7 +74,6 @@ multilib_src_configure() {
 	fi
 	local emesonargs=(
 		-Dinclude_doc=false
-		-Dmangoapp_layer=false
 		-Duse_system_spdlog=enabled
 		-Dappend_libdir_mangohud=false
 		$(meson_feature video_cards_nvidia with_nvml)
