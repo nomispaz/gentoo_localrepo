@@ -55,7 +55,23 @@ src_unpack() {
 	mv "${WORKDIR}/${MY_PN}-v${MY_PV}${MY_PV_REV}" "${WORKDIR}/mangohud-${MY_PV}${MY_PV_REV}" || die
 }
 
+src_prepare() {
+	default
+	# replace all occurences of "#include <imgui.h>" to "#include <imgui/imgui.h>"
+	find . -type f -exec sed -i 's|<imgui.h>|<imgui/imgui.h>|g' {} \; || die
+	find . -type f -exec sed -i 's|"imgui.h"|<imgui/imgui.h>|g' {} \; || die
+	find . -type f -exec sed -i 's|<imgui_internal.h>|<imgui/imgui_internal.h>|g' {} \; || die
+	find . -type f -exec sed -i 's|"imgui_internal.h"|<imgui/imgui_internal.h>|g' {} \; || die
+	find . -type f -exec sed -i 's|"imgui_impl_glfw.h"|<imgui/imgui_impl_glfw.h>|g' {} \; || die
+	find . -type f -exec sed -i 's|"imgui_impl_opengl3.h"|<imgui/imgui_impl_opengl3.h>|g' {} \; || die
+}
+
 multilib_src_configure() {
+	# workaround for lld
+	# https://github.com/flightlessmango/MangoHud/issues/1240
+	if tc-ld-is-lld; then
+		append-ldflags -Wl,--undefined-version
+	fi
 	local emesonargs=(
 		-Dinclude_doc=false
 		-Dmangoapp_layer=false
