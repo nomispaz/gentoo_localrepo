@@ -26,7 +26,7 @@ REQUIRED_USE="
 	xnvctrl? ( video_cards_nvidia )"
 
 BDEPEND="
-	$(python_gen_any_dep 'dev-python/mako[${PYTHON_USEDEP}]')
+	$(python_gen_cond_dep 'dev-python/mako[${PYTHON_USEDEP}]')
 "
 
 python_check_deps() {
