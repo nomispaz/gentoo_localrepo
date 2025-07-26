@@ -2,9 +2,9 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..13} )
+PYTHON_COMPAT=( python3_{12..13} )
 
-inherit python-any-r1 meson
+inherit flag-o-matic python-single-r1 meson-multilib toolchain-funcs
 
 MY_PN="MangoHud"
 MY_PV=$(ver_cut 1-3)
@@ -19,7 +19,7 @@ KEYWORDS="~amd64"
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="+dbus debug +X xnvctrl +wayland video_cards_nvidia video_cards_amdgpu"
+IUSE="+dbus debug +X xnvctrl wayland mangoapp mangohudctl mangoplot video_cards_nvidia video_cards_amdgpu test"
 
 REQUIRED_USE="
 	|| ( X wayland )
@@ -58,14 +58,17 @@ src_unpack() {
 src_configure() {
 	local emesonargs=(
 		-Dinclude_doc=false
-		-Dmangoapp=false
-        -Dmangohudctl=false
 		-Dmangoapp_layer=false
+		-Duse_system_spdlog=enabled
+		-Dappend_libdir_mangohud=false
 		$(meson_feature video_cards_nvidia with_nvml)
 		$(meson_feature xnvctrl with_xnvctrl)
 		$(meson_feature X with_x11)
 		$(meson_feature wayland with_wayland)
 		$(meson_feature dbus with_dbus)
+		$(meson_use mangoapp mangoapp)
+		$(meson_use mangohudctl mangohudctl)
+		$(meson_feature mangoplot mangoplot)
 	)
 	meson_src_configure
 }
