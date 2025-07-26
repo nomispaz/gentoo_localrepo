@@ -55,7 +55,7 @@ src_unpack() {
 	mv "${WORKDIR}/${MY_PN}-v${MY_PV}${MY_PV_REV}" "${WORKDIR}/mangohud-${MY_PV}${MY_PV_REV}" || die
 }
 
-src_configure() {
+multilib_src_configure() {
 	local emesonargs=(
 		-Dinclude_doc=false
 		-Dmangoapp_layer=false
