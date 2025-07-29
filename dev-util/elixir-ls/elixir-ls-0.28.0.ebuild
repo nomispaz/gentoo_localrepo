@@ -20,6 +20,7 @@ S="${WORKDIR}/elixir-ls-${PV}"
 src_compile() {
   # Force Mix to use local _build
   mix deps.get || die "deps failed"
+  mix archive.install github hexpm/hex branch latest
   mix compile || die "compile failed"
   MIX_ENV=prod mix elixir_ls.release2 -o release || die "release failed"
 }
