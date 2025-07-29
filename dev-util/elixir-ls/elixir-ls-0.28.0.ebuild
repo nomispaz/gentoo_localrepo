@@ -19,8 +19,8 @@ S="${WORKDIR}/elixir-ls-${PV}"
 
 src_compile() {
   # Force Mix to use local _build
-  MIX_ENV=prod mix deps.get || die "deps failed"
-  MIX_ENV=prod mix compile || die "compile failed"
+  mix deps.get || die "deps failed"
+  mix compile || die "compile failed"
   MIX_ENV=prod mix elixir_ls.release2 -o release || die "release failed"
 }
 
