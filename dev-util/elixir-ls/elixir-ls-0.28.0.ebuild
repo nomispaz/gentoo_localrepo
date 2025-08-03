@@ -30,6 +30,7 @@ src_install() {
   # Install the compiled language server release
   exeinto /usr/bin
   doexe release/language_server.sh
+  doexe release/launch.sh
 
   insinto /usr/share/elixir-ls
   doins -r release/*
