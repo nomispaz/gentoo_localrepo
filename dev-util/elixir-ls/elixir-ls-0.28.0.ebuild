@@ -17,11 +17,13 @@ IUSE=""
 DEPEND="dev-lang/elixir"
 RDEPEND="${DEPEND}"
 
+RESTRICT="network-sandbox"
+
 S="${WORKDIR}/elixir-ls-${PV}"
 
 src_compile() {
   # Force Mix to use local _build
-  #mix deps.get || die "deps failed"
+  mix deps.get || die "deps failed"
   mix compile || die "compile failed"
   MIX_ENV=prod mix elixir_ls.release2 -o release || die "release failed"
 }
