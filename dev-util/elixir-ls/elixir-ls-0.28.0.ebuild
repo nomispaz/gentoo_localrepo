@@ -18,6 +18,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/elixir-ls-${PV}"
 
 src_compile() {
+  mix archive.install github hexpm/hex branch latest
   # Force Mix to use local _build
   mix deps.get || die "deps failed"
   mix compile || die "compile failed"
