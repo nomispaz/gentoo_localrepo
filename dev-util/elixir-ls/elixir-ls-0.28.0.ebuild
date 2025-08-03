@@ -3,6 +3,8 @@
 
 EAPI=8
 
+inherit git-r3
+
 DESCRIPTION="Elixir Language Server (ElixirLS)"
 HOMEPAGE="https://github.com/elixir-lsp/elixir-ls"
 SRC_URI="https://github.com/elixir-lsp/elixir-ls/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
@@ -18,9 +20,8 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/elixir-ls-${PV}"
 
 src_compile() {
-  mix archive.install github hexpm/hex branch latest
   # Force Mix to use local _build
-  mix deps.get || die "deps failed"
+  #mix deps.get || die "deps failed"
   mix compile || die "compile failed"
   MIX_ENV=prod mix elixir_ls.release2 -o release || die "release failed"
 }
