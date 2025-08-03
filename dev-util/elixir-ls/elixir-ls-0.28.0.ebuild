@@ -3,8 +3,6 @@
 
 EAPI=8
 
-inherit git-r3
-
 DESCRIPTION="Elixir Language Server (ElixirLS)"
 HOMEPAGE="https://github.com/elixir-lsp/elixir-ls"
 SRC_URI="https://github.com/elixir-lsp/elixir-ls/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
